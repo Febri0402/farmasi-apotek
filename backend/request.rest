@@ -1,0 +1,117 @@
+// Create a user
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Apotek i",
+    "email": "apotekuser@gmail.com",
+    "password": "12345",
+    "confPassword": "12345",
+    "role": "user"
+}
+
+###
+// get All Users
+
+GET http://localhost:5000/users
+
+###
+//Get Single User
+
+GET http://localhost:5000/users/adba93ac-839e-45b5-aa14-fbed4071348a
+
+###
+// Update a user
+PATCH http://localhost:5000/users/adba93ac-839e-45b5-aa14-fbed4071348a
+Content-Type: application/json
+
+{
+    "name": "Apotek Updated",
+    "email": "Apotek@gmail.com",
+    "password": "",
+    "confPassword": "",
+    "role": "user"
+}
+
+###
+//  delete a user
+DELETE http://localhost:5000/users/adba93ac-839e-45b5-aa14-fbed4071348a
+
+###
+// Login User
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "apotekrsa@gmail.com",
+    "password": "12345"
+}
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "Apotekuser@gmail.com",
+    "password": "12345"
+}
+
+###
+GET http://localhost:5000/me
+
+###
+DELETE http://localhost:5000/logout
+
+###
+// Get All Products
+GET http://localhost:5000/products
+
+###
+// Get Single Product
+GET http://localhost:5000/products/0709f52e-96f6-429d-a904-ac2db7e4bea5
+
+###
+// POST Data Product
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "nama_barang": "ABU inj",
+    "harga": 825000,
+    "kode_barang": "6.010.10.0001",
+    "jumlah": "3",
+    "tanggal_kadaluarsa": "2020-11-02"
+}
+
+###
+// POST Data Product
+PATCH http://localhost:5000/products/48ad70ed-622e-4a67-8fcd-dfa4314fea37
+Content-Type: application/json
+
+{
+    "nama_barang": "Product Updated ",
+    "harga": 825000,
+    "kode_barang": "6.010.10.0001",
+    "jumlah": "3",
+    "tanggal_kadaluarsa": "2020-11-02"
+}
+
+###
+DELETE http://localhost:5000/products/0709f52e-96f6-429d-a904-ac2db7e4bea5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
